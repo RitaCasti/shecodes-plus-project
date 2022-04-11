@@ -19,6 +19,7 @@
     <title>Rita's Project</title>
   </head>
   <body>
+    <div id="styledimg"></div>
     <div class="container">
         <div class="weather-app" id="form-city">
             <div class="row">
@@ -43,17 +44,17 @@
       <h1 id="city"> Lisbon, Portugal </h1>
       <ul>
           <li id="date-now"></li>
-          <li id="description">
-            Sunny
+          <li id="description">Sunny
           </li>
         </ul>
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
               <div class="clearfix">
                <div class="float-left">
+                 <i class="fa-solid fa-sun"></i>
                   <span class="temperature" id="city-temp">19</span
                   >
-                  <span class="units">°C </span>
+                  <span class="units">°C | <a href ="#" >ºF </a></span>
                 </div>
                 </div>
             </div>
@@ -71,10 +72,11 @@
 
           </div>
         </div>
-          </div>
-        <small>
+              <small>
 <a href="https://github.com/RitaCasti/shecodes-plus-project" traget = "black">Open-source code </a>by Rita Castelhano 
 <small>
+          </div>
+  
       
      <script src="src/index.js"></script>
   </body>
