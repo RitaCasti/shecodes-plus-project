@@ -1,17 +1,19 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-.weather-app {
-  border: 1px solid #dadde1;
-  padding: 15px;
+.weather-app-wrapper {
   margin: 20px auto;
-  border-radius: 10px;
   max-width: 600px;
 }
-
+.weather-app-wrapper {
+  border: 1px solid #dadde1;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
 h1 {
   color: grey;
-  font-size: 25px;
+  font-size: 30px;
   position: relative;
   top: 10px;
   text-align: left;
@@ -25,17 +27,15 @@ li {
   list-style: none;
   color: grey;
   text-align: left;
-  position: relative;
 }
 .temperature {
   font-size: 65px;
-  position: relative;
 
   top: -25px;
 }
 .units {
   position: relative;
-  top: -55px;
+  top: -40px;
 }
 .btn-success {
   width: 100%;

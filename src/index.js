@@ -1,3 +1,27 @@
+function showTemperature(response) {
+  let temperature = Math.round(response.data.main.temp);
+  let city = response.data.name;
+  let cityTemp = document.querySelector("#city-temp");
+  let heading = document.querySelector("#city");
+  let cityDescription = document.querySelector("#description");
+  let description = response.data.weather[0].description;
+  let cityWind = document.querySelector("#wind");
+  let wind = Math.round(response.data.wind.speed);
+  let cityHumidity = document.querySelector("#humidity");
+  let humidity = Math.round(response.data.main.humidity);
+  let iconElement = querySelector("icon");
+
+  cityDescription.innerHTML = `${description}`;
+  cityWind.innerHTML = `Wind: ${wind}km/h`;
+  cityHumidity.innerHTML = `Humidity:${humidity}%`;
+  cityTemp.innerHTML = `${temperature}`;
+  console.log(`${temperature}º ${city}`);
+  heading.innerHTML = city;
+  iconElement.setAtributte(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.wwather[0].icon}@2x.png`
+  );
+}
 function showPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchPosition);
@@ -10,7 +34,6 @@ function searchPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
 
   axios.get(apiUrl).then(showTemperature);
 }
@@ -35,26 +58,6 @@ let form = document.querySelector("#form-city");
 form.addEventListener("search", showCity);
 let searchButton = document.querySelector("#search");
 searchButton.addEventListener("click", showCity);
-
-function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let city = response.data.name;
-  let cityTemp = document.querySelector("#city-temp");
-  cityTemp.innerHTML = `${temperature}`;
-  console.log(`${temperature}º ${city}`);
-  let heading = document.querySelector("#city");
-  heading.innerHTML = city;
-
-  let cityDescription = document.querySelector("#description");
-  let description = response.data.weather[0].description;
-  let cityWind = document.querySelector("#wind");
-  let wind = Math.round(response.data.wind.speed);
-  let cityHumidity = document.querySelector("#humidity");
-  let humidity = Math.round(response.data.main.humidity);
-  cityDescription.innerHTML = `${description}`;
-  cityWind.innerHTML = `Wind: ${wind}km/h`;
-  cityHumidity.innerHTML = `Humidity:${humidity}%`;
-}
 
 let currentTime = new Date();
 function formatDate(date) {
