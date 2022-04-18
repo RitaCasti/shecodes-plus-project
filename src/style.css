@@ -2,7 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .weather-app-wrapper {
-  margin: 20px auto;
+  margin: 30px auto;
   max-width: 600px;
 }
 .weather-app-wrapper {
@@ -28,15 +28,23 @@ li {
   color: grey;
   text-align: left;
 }
-.temperature {
-  font-size: 65px;
 
-  top: -25px;
-}
-.units {
-  position: relative;
-  top: -40px;
-}
 .btn-success {
   width: 100%;
+}
+.weather-temperature img {
+  margin-right: 0px;
+  margin-bottom: 20px;
+  height: 85px;
+  width: 85px;
+}
+.weather-temperature strong {
+  font-size: 50px;
+  line-height: 1px;
+  font-weight: normal;
+  margin-left: 0px;
+}
+.weather-temperature .units {
+  position: relative;
+  top: -25px;
 }
