@@ -28,7 +28,7 @@ li {
   color: grey;
   text-align: left;
 }
-li.first-letter {
+li:first-letter {
   text-transform: capitalize;
 }
 
