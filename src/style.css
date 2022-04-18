@@ -5,7 +5,7 @@ body {
   margin: 30px auto;
   max-width: 600px;
 }
-.weather-app-wrapper {
+.weather-app {
   border: 1px solid #dadde1;
   padding: 20px;
   border-radius: 10px;
@@ -27,6 +27,8 @@ li {
   list-style: none;
   color: grey;
   text-align: left;
+}
+li.first-letter {
   text-transform: capitalize;
 }
 
