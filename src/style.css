@@ -51,3 +51,11 @@ li:first-letter {
   position: relative;
   top: -25px;
 }
+.weather-temperature .active {
+  cursor: default;
+  color: black;
+  text-decoration: none;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
