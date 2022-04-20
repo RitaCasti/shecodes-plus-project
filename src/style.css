@@ -9,7 +9,8 @@ body {
   border: 1px solid #dadde1;
   padding: 20px;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #deebdd;
+  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
 }
 h1 {
   color: grey;
